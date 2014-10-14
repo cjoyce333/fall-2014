@@ -5,7 +5,7 @@ of three points simply connects those three points, so they are connected to fin
 To combine the left and right convex hulls, you find the upper and lower tangent lines to the polygons. 
 
 Connect the two hulls at these tangent points, and throw out all the points in the middle. 
-One special case could be if a line throught the tangent points would pass through multiple other points, 
+One special case could be if a line through the tangent points would pass through multiple other points, 
 
 put differently, both tangent points and other points on the hull are collinear. This could be handled by 
 
