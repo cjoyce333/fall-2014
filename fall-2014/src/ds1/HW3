@@ -90,3 +90,5 @@ Then, g can be decreased and the g-1 element must be tried.
 
 Since g is the number of unsorted items, it must keep decreasing as items are sorted into their final positions.
 It must decrease to g-1 in g steps because each element will be compared to each other item.
+
+Therefore, BartonSort does work because it will sort the elements in the list one at a time until it is sorted, then terminate when g=0.
