@@ -1,15 +1,14 @@
 The base case of the divide and conquer algorithm is when there are three or less points. The convex hull 
-
 of three points simply connects those three points, so they are connected to find the hull.
 
-To combine the left and right convex hulls, you find the upper and lower tangent lines to the polygons. 
+To combine the left and right convex hulls, you find the upper and lower tangent lines to the polygons.
+Do this by checking each pair of points on the right and left hulls for tangency. For the upper tangent,
+walk clockwise around the left hull and counterclockwise around the right hull. For the lower tangent, walk
+counterclockwise around the left hull, and clockwise around the right hull.
+Once the tangent points are found, connect the two hulls at these tangent points, and throw out all the points in the middle. 
 
-Connect the two hulls at these tangent points, and throw out all the points in the middle. 
 One special case could be if a line through the tangent points would pass through multiple other points, 
-
 put differently, both tangent points and other points on the hull are collinear. This could be handled by 
-
 only using the two closest points to the center.
 Another special case is if all of the points are collinear, in which case they would all connect together 
-
-to form a sort of hull.
+to form a sort of hull which is a straight line.
